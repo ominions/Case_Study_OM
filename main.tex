@@ -1,0 +1,97 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[left=1.5in, right=1in,top=1in,bottom=1in,headheight=6pt, a4paper]{geometry}
+
+%import package
+\usepackage{hyperref}
+\usepackage{caption}
+\captionsetup[table]{justification=centering}
+\usepackage{array}
+\usepackage{booktabs}   
+\usepackage[titles]{tocloft}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{ragged2e}       % for justify
+\usepackage{hhline}
+\usepackage{pgfgantt}       % for gantt chart
+\usepackage{graphicx}
+\graphicspath{{./Graphics/}} 
+\usepackage{titling}
+\usepackage{booktabs}
+\usepackage[numbers]{natbib}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage[font=normalsize,labelfont=bf,tableposition=top]{caption}
+\usepackage{setspace}
+\usepackage{tabto}
+\usepackage[explicit]{titlesec}
+\usepackage[absolute]{textpos}
+\usepackage[export]{adjustbox}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{datetime}
+\pagestyle{plain}
+\usepackage{lipsum}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+\linespread{1.5}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0em}
+\titleformat{\chapter}[display]
+    {\centering\normalfont\normalsize\bfseries}{\MakeUppercase{\chaptertitlename} \thechapter}{0pt}{\normalsize #1}
+\titlespacing{\chapter}{0pt}{0pt}{20pt}
+
+
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}{\thesection}{1em}{#1}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize}{\thesubsection}{1em}{#1}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize}{\thesubsection}{1em}{#1}
+
+\titlespacing*{\section}{0pt}{2.5ex plus 0.8ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{2.5ex plus 0.8ex minus .2ex}{1.5ex plus .2ex}
+
+
+\renewcommand{\baselinestretch}{1.5}
+\captionsetup[table]{singlelinecheck=off}
+\title{Organization and Management of the Enterprise - Urja Labs}
+\author{}
+% \author{Member1\thanks{Affiliation1}, Member2\thanks{Affiliation2}, Member3\thanks{Affiliation3}}
+
+\date{}
+
+\renewcommand{\bibname}{REFERENCES}
+\renewcommand\contentsname{TABLE OF CONTENTS}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\listtablename}{LIST OF TABLES}
+
+
+
+\begin{document}
+\include{./Section/cover.tex}
+\pagenumbering{roman}
+% \include{Section/acknowledgement.tex}
+\include{Section/abstract.tex}
+\addcontentsline{toc}{chapter}{\contentsname}{\tableofcontents}
+\clearpage
+
+\addcontentsline{toc}{chapter}{\listfigurename}{\listoffigures}
+\clearpage
+\addcontentsline{toc}{chapter}{\listtablename}{\listoftables}
+
+% \addcontentsline{toc}{chapter}{\listtablename}{\listoftables}
+\include{Section/abbreviation.tex}
+\include{Section/introduction.tex}
+% \include{Section/literaturereview.tex}
+\include{Section/relatedtheory.tex}
+\include{Section/methodology.tex}
+\include{Section/conclusion.tex}
+\bibliographystyle{IEEEtran}
+\bibliography{References/ref.bib}
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+\end{document}
