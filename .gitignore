@@ -5,17 +5,10 @@ main.log
 main.lot
 main.out
 main.toc
-<<<<<<< HEAD
 main.fls
 main.bbl
 main.fdb_latexmk
 main.synctex.gz
 main.blg
-=======
-main.bbl
-main.blg
-main.fdb_latexmk
-main.fls
-main.synctex.gz
->>>>>>> 1cc5c21ec7b871748e1a7db560d5c6f578668a6d
+
 
